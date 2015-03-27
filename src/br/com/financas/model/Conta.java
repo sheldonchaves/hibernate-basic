@@ -1,12 +1,16 @@
 package br.com.financas.model;
 
+import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Conta {
@@ -19,7 +23,10 @@ public class Conta {
 	private String agencia;
 	private String numero;
 	private String titular;
-
+	
+	@Embedded
+	private LoggableInfo LoggableInfo = new LoggableInfo();
+	
 	@OneToMany(mappedBy="conta")
 	private List<Movimentacao> movimentacoes;
 	

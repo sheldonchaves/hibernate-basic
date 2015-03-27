@@ -9,10 +9,10 @@ public class Insert {
 	public static void main(String[] args) {
 
 		Conta conta = new Conta();
-		conta.setTitular("jose dos Santos");
-		conta.setBanco("Itau");
-		conta.setAgencia("0453");
-		conta.setNumero("56621");
+		conta.setTitular("Marco Veio");
+		conta.setBanco("Safra");
+		conta.setAgencia("876");
+		conta.setNumero("9875");
 
 		EntityManager manager = new JPAUtil().getEntityManager();
 		
